@@ -9,7 +9,7 @@
 
 <!--2. Использование @if с альтернативными условиями @else if и @else-->
 <div class="lab-content">
-  <h2>Пример использования {{'@if с @else if и @else'}}</h2>
+  <h2>Пример использования {{ '@if с @else if и @else' }}</h2>
   <button (click)="loadData()">Загрузить данные</button>
 
   @if (status === 'loading') {
@@ -30,15 +30,3 @@
     <p>Профиль пользователя не найден.</p>
   }
 </div>
-<!--4. Комбинация @if с разными типами данных-->
-<div *ngIf="status === 'loading'; else errorOrSuccess">
-  <p>Загрузка данных...</p>
-</div>
-<ng-template #errorOrSuccess>
-  <div *ngIf="status === 'error'; else success">
-    <p>Произошла ошибка. Попробуйте снова.</p>
-  </div>
-</ng-template>
-<ng-template #success>
-  <p>Данные успешно загружены!</p>
-</ng-template>

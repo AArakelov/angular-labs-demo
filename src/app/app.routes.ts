@@ -15,14 +15,15 @@ export const routes: Routes = [
         path: 'repeat-content',
         loadComponent: () => import('./labs/labs-control-flow/repeat-content/repeat-content.component')
           .then(c => c.RepeatContentComponent)
-      },  {
+      }, {
         path: 'conditional-switch-block',
         loadComponent: () => import('./labs/labs-control-flow/conditional-switch-block/conditional-switch-block.component')
           .then(c => c.ConditionalSwitchBlockComponent)
       },
+
       {
-        path :'',
-        pathMatch:'full',
+        path: '',
+        pathMatch: 'full',
         redirectTo: 'conditionally-content'
       }
     ]
@@ -30,5 +31,9 @@ export const routes: Routes = [
   {
     path: 'labs-components', loadComponent: () => import('./labs/labs-components/labs-components.component')
       .then(c => c.LabsComponentsComponent)
+  },
+  {
+    path: 'labs-defer', loadComponent: () => import('./labs/labs-defer/labs-defer.component')
+      .then(c => c.LabsDeferComponent)
   },
 ];
