@@ -1,0 +1,44 @@
+<!--//1. Базовое использование @if-->
+<div class="lab-content">
+  <h2>Пример использования</h2>
+  @if (username) {
+    <p>Привет, {{ username }}!</p>
+  }
+  <input [(ngModel)]="username">
+</div>
+
+<!--2. Использование @if с альтернативными условиями @else if и @else-->
+<div class="lab-content">
+  <h2>Пример использования {{'@if с @else if и @else'}}</h2>
+  <button (click)="loadData()">Загрузить данные</button>
+
+  @if (status === 'loading') {
+    <p>Загрузка данных...</p>
+  } @else if (status === 'error') {
+    <p>Произошла ошибка. Попробуйте снова.</p>
+  } @else {
+    <p>Данные успешно загружены!</p>
+  }
+</div>
+<!--3. Сохранение результата выражения с помощью as-->
+<div class="lab-content">
+  <h2>Пример использования с сохранением переменной</h2>
+  @if (user?.profile; as profile) {
+    <p>Имя: {{ profile.name }}</p>
+    <p>Email: {{ profile.email }}</p>
+  } @else {
+    <p>Профиль пользователя не найден.</p>
+  }
+</div>
+<!--4. Комбинация @if с разными типами данных-->
+<div *ngIf="status === 'loading'; else errorOrSuccess">
+  <p>Загрузка данных...</p>
+</div>
+<ng-template #errorOrSuccess>
+  <div *ngIf="status === 'error'; else success">
+    <p>Произошла ошибка. Попробуйте снова.</p>
+  </div>
+</ng-template>
+<ng-template #success>
+  <p>Данные успешно загружены!</p>
+</ng-template>

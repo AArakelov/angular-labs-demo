@@ -1,1 +1,89 @@
-/* You can add global styles to this file, and also import other style files */
+@use "bootstrap/dist/css/bootstrap.min.css";
+.lab-content {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.lab-content h2 {
+  color: #00796b;
+  margin-bottom: 15px;
+}
+
+.lab-content p {
+  color: #333;
+  margin: 5px 0;
+  line-height: 1.6;
+}
+/* Основные стили для главного меню */
+nav {
+  background-color: #00796b;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #004d40;
+}
+
+/* Стили для активных ссылок */
+nav ul li a.active {
+  background-color: #004d40;
+}
+
+/* Стили для подменю */
+.submenu {
+  background-color: #004d40;
+  padding: 0.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.submenu ul {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+}
+
+.submenu ul li a {
+  color: #ffffff;
+  padding: 0.3rem 0.8rem;
+  transition: background-color 0.3s ease;
+}
+
+.submenu ul li a:hover {
+  background-color: #002d26;
+}
+
+.child-container {
+  margin-top: 1rem;
+}

@@ -1,0 +1,13 @@
+<!-- labs-control-flow.component.html -->
+<nav class="submenu">
+  <ul>
+    <li><a [routerLink]="'conditionally-content'" routerLinkActive="active">Conditionally Content</a></li>
+    <li><a [routerLink]="'repeat-content'" routerLinkActive="active">Repeat Content</a></li>
+    <li><a [routerLink]="'conditional-switch-block'" routerLinkActive="active">Conditional Switch-block</a></li>
+    <!-- Добавьте другие дочерние пути при необходимости -->
+  </ul>
+</nav>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
