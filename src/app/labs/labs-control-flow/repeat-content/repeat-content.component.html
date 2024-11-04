@@ -1,11 +1,11 @@
 <!--Сценарий 1: Базовый пример использования @for-->
 <div class="item-list">
   <h2>Список элементов</h2>
-    @for (item of items; track item.id) {
-      <p>{{ item.name }}</p>
-    } @empty {
-      <p>Нет доступных элементов.</p>
-    }
+  @for (item of items; track item.id) {
+    <p>{{ item.name }}</p>
+  } @empty {
+    <p>Нет доступных элементов.</p>
+  }
 </div>
 <!--Сценарий 2: Сложные объекты с вложенными структурами-->
 <div class="item-list">
@@ -23,20 +23,13 @@
 <!--Пример использования контекстных переменных-->
 <div class="item-list">
   <h2>Пример использования контекстных переменных</h2>
-    @for (item of items; let first = $first; track item.id) {
-      <div class="p-2" [ngClass]="{ 'first-item': first, 'last-item': $last, 'even-item': $even, 'odd-item': $odd }">
-        <p>{{ $index + 1 }}. {{ item.name }}</p>
-        <button (click)="selectItem(item)">Выбрать</button>
-      </div>
-    } @empty {
-      <p>Нет доступных элементов.</p>
-    }
+  @for (item of items; let first = $first; track item.id) {
+    <div class="p-2" [ngClass]="{ 'first-item': first, 'last-item': $last, 'even-item': $even, 'odd-item': $odd }">
+      <p>{{ $index + 1 }}. {{ item.name }}</p>
+      <button (click)="selectItem(item)">Выбрать</button>
+    </div>
+  } @empty {
+    <p>Нет доступных элементов.</p>
+  }
 </div>
-<div *ngFor="let item of items; let first = first; let index = index; let last = last; let even = even; let odd = odd" class="p-2"
-     [ngClass]="{ 'first-item': first, 'last-item': last, 'even-item': even, 'odd-item': odd }">
-  <p>{{ index + 1 }}. {{ item.name }}</p>
-  <button (click)="selectItem(item)">Выбрать</button>
-</div>
-<ng-template *ngIf="items.length === 0">
-  <p>Нет доступных элементов.</p>
-</ng-template>
+

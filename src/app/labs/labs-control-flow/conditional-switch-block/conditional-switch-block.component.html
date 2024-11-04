@@ -1,4 +1,3 @@
-
 <div class="status-message">
   <h2>Статус операции</h2>
   <div>
@@ -7,21 +6,18 @@
     <button (click)="updateStatus('success')">Успех</button>
   </div>
   @switch (status) {
-    @case( 'loading' ){
-    <p class="text-info">Загрузка данных...</p>
-      }
+    @case ('loading') {
+      <p class="text-info">Загрузка данных...</p>
+    }
     @case ('error') {
-    <p class="text-danger">Произошла ошибка. Попробуйте снова.</p>
-      }
+      <p class="text-danger">Произошла ошибка. Попробуйте снова.</p>
+    }
     @case ('success') {
-    <p class="text-success">Данные успешно загружены!</p>
-      }
-
+      <p class="text-success">Данные успешно загружены!</p>
+    }
     @default {
       <p class="text-secondary">Статус неизвестен.</p>
     }
   }
-
-
 </div>
 

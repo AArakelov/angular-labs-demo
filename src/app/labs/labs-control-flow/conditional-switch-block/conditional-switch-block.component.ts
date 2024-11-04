@@ -1,11 +1,9 @@
-import { Component } from '@angular/core';
-import {NgSwitch, NgSwitchCase, NgSwitchDefault} from '@angular/common';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-conditional-switch-block',
   standalone: true,
-  imports: [
-  ],
+  imports: [],
   templateUrl: './conditional-switch-block.component.html',
   styleUrl: './conditional-switch-block.component.scss'
 })
