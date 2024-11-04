@@ -34,6 +34,19 @@ export const routes: Routes = [
   },
   {
     path: 'labs-defer', loadComponent: () => import('./labs/labs-defer/labs-defer.component')
-      .then(c => c.LabsDeferComponent)
+      .then(c => c.LabsDeferComponent),
+    children: [
+      {
+        path: 'idle-demo',
+        loadComponent: () => import('./labs/labs-defer/idle-demo/idle-demo.component').then(c => c.IdleDemoComponent)
+      },
+      {
+        path: 'trigger-viewport',
+        loadComponent: () => import('./labs/labs-defer/trigger-viewport/trigger-viewport.component').then(c => c.TriggerViewportComponent)
+      }, {
+        path: 'interaction-demo',
+        loadComponent: () => import('./labs/labs-defer/interaction-demo/interaction-demo.component').then(c => c.InteractionDemoComponent)
+      }
+    ]
   },
 ];

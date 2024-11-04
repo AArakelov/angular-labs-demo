@@ -1,0 +1,14 @@
+<div class="idle-demo-container">
+  <h1>Демонстрация триггера defer (idle)</h1>
+
+  <p>Контент будет загружен только после того, как браузер перейдет в состояние простоя.</p>
+
+
+  @defer (on idle) {
+    <app-heavy-component></app-heavy-component>
+  }
+
+
+  <button (click)="startBusyTask()">Запустить длительную задачу</button>
+  <p *ngIf="busy">Браузер занят...</p>
+</div>

@@ -1,0 +1,46 @@
+<div class="immediate-demo-container">
+  <h1>Демонстрация триггера defer (on timer)</h1>
+
+  <p>Контент загружается после 3 секунд после рендеринга.</p>
+
+  @defer (on timer(3000)) {
+    <app-heavy-component></app-heavy-component>
+  }
+
+</div>
+<div class="immediate-demo-container">
+  <h1>Демонстрация триггера defer (on immediate)</h1>
+
+  <p>Контент загружается немедленно после рендеринга.</p>
+
+  @defer (on immediate) {
+    <app-heavy-component></app-heavy-component>
+  }
+
+</div>
+<div class="interaction-demo-container">
+  <h1>Демонстрация триггера defer (on interaction)</h1>
+
+  <button #btnLoading (click)="loadContent()">Загрузить контент</button>
+
+  @defer (on interaction(btnLoading)) {
+    <app-heavy-component></app-heavy-component>
+
+  } @placeholder (minimum 500ms) {
+    <p>Нажмите кнопку для загрузки тяжелого контента.</p>
+  }
+
+</div>
+<div class="interaction-demo-container">
+  <h1>Демонстрация триггера defer (on hover)</h1>
+
+  <button #btnLoadingHover (click)="loadContent()">Загрузить контент</button>
+
+  @defer (on hover(btnLoadingHover)) {
+    <app-heavy-component></app-heavy-component>
+
+  } @placeholder {
+    <p>Наведи на кнопку для загрузки тяжелого контента.</p>
+  }
+
+</div>

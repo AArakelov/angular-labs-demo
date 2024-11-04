@@ -1,51 +1,58 @@
-<div class="labs-defer-container">
-  <h1>Демонстрация отложенной загрузки изображений</h1>
+<!--  &lt;!&ndash;  <h2>Загрузка при входе в область видимости (viewport)</h2>&ndash;&gt;-->
+<!--  &lt;!&ndash;  <div @defer (on viewport)>&ndash;&gt;-->
+<!--  &lt;!&ndash;    <app-image-gallery></app-image-gallery>&ndash;&gt;-->
+<!--  &lt;!&ndash;  </div>&ndash;&gt;-->
 
-  <p>Ниже представлено несколько разделов контента. Изображения будут загружены только при прокрутке.</p>
+<!--  &lt;!&ndash;  <h2>Загрузка при взаимодействии (interaction)</h2>&ndash;&gt;-->
+<!--  &lt;!&ndash;  <button @defer (on interaction)>&ndash;&gt;-->
+<!--  &lt;!&ndash;    Показать дополнительный контент&ndash;&gt;-->
+<!--  &lt;!&ndash;  </button>&ndash;&gt;-->
+<!--  &lt;!&ndash;  <div>&ndash;&gt;-->
+<!--  &lt;!&ndash;    <app-extra-content></app-extra-content>&ndash;&gt;-->
+<!--  &lt;!&ndash;  </div>&ndash;&gt;-->
 
-  <div class="content-section">
-    <h2>Раздел 1</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris.</p>
-  </div>
+<!--  &lt;!&ndash;  <h2>Загрузка при наведении (hover)</h2>&ndash;&gt;-->
+<!--  &lt;!&ndash;  <div @defer (on hover)>&ndash;&gt;-->
+<!--  &lt;!&ndash;    <app-tooltip></app-tooltip>&ndash;&gt;-->
+<!--  &lt;!&ndash;  </div>&ndash;&gt;-->
 
-  <div class="content-section">
-    <h2>Раздел 2</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris.</p>
-  </div>
+<!--  &lt;!&ndash;  <h2>Немедленная загрузка (immediate)</h2>&ndash;&gt;-->
+<!--  &lt;!&ndash;  <div @defer (immediate)>&ndash;&gt;-->
+<!--  &lt;!&ndash;    <app-notification></app-notification>&ndash;&gt;-->
+<!--  &lt;!&ndash;  </div>&ndash;&gt;-->
 
-  <div class="content-section">
-    <h2>Раздел 3</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris.</p>
-  </div>
+<!--  &lt;!&ndash;  <h2>Загрузка через таймер (timer)</h2>&ndash;&gt;-->
+<!--  &lt;!&ndash;  <div @defer (timer)>&ndash;&gt;-->
+<!--  &lt;!&ndash;&lt;!&ndash;    <app-delayed-message></app-delayed-message>&ndash;&gt;&ndash;&gt;-->
+<!--  &lt;!&ndash;  </div>&ndash;&gt;-->
+<!--</div>-->
 
-  <div class="content-section">
-    <h2>Раздел 4</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris.</p>
-  </div>
 
-  <div class="content-section">
-    <h2>Раздел 5</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris.</p>
-  </div>
+<!--<div class="demo-container">-->
+<!--  <h1>Демонстрация триггеров defer</h1>-->
 
-  <!--   Использование @defer для отложенной загрузки тяжелого изображения-->
-  @defer (on viewport) {
-    <div class="image-wrapper">
-      <app-deferred-image></app-deferred-image>
-    </div>
-  } @placeholder {
-    <p>Placeholder</p>
-  } @loading {
-    <p>Loading...</p>
-  }
+<!--  <h2>Загрузка при простое (idle)</h2>-->
+<!--  @defer (on idle) {-->
+<!--    <app-heavy-component></app-heavy-component>-->
+<!--  } @placeholder {-->
+<!--    <div>Calendar placeholder</div>-->
+<!--  }-->
 
-  <div class="content-section">
-    <h2>Раздел 6</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris.</p>
-  </div>
+<!--  <h2>Загрузка при взаимодействии (interaction)</h2>-->
+<!--  <app-busy></app-busy>-->
+<!--</div>-->
+<!-- labs-control-flow.component.html -->
+<nav class="submenu">
+  <ul>
+    <li><a [routerLink]="'idle-demo'" routerLinkActive="active">Conditionally Content</a></li>
+    <li><a [routerLink]="'trigger-viewport'" routerLinkActive="active">Trigger Viewport</a></li>
+    <li><a [routerLink]="'interaction-demo'" routerLinkActive="active">Interaction demo</a></li>
+    <!--    <li><a [routerLink]="'repeat-content'" routerLinkActive="active">Repeat Content</a></li>-->
+    <!--    <li><a [routerLink]="'conditional-switch-block'" routerLinkActive="active">Conditional Switch-block</a></li>-->
+    <!-- Добавьте другие дочерние пути при необходимости -->
+  </ul>
+</nav>
 
-  <div class="content-section">
-    <h2>Раздел 7</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris.</p>
-  </div>
+<div class="container">
+  <router-outlet></router-outlet>
 </div>
