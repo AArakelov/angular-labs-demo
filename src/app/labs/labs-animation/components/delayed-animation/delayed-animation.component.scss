@@ -1,0 +1,27 @@
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #004d40;
+}
+
+.fade-element, .slide-element, .scale-element {
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+  background-color: #4caf50;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  border-radius: 8px;
+}

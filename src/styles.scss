@@ -1,4 +1,5 @@
 @use "bootstrap/dist/css/bootstrap.min.css";
+
 .lab-content {
   max-width: 600px;
   margin: 20px auto;
@@ -19,6 +20,7 @@
   margin: 5px 0;
   line-height: 1.6;
 }
+
 /* Основные стили для главного меню */
 nav {
   background-color: #00796b;
@@ -86,4 +88,12 @@ nav ul li a.active {
 
 .child-container {
   margin-top: 1rem;
+}
+
+.block {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border: 1px solid #ddd;
 }

@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Вычисляемые сигналы</h1>
+  <p>Цена за единицу товара: {{ price() }} руб.</p>
+  <p>Количество: {{ quantity() }}</p>
+  <p>Общая стоимость: {{ totalCost() }} руб.</p>
+
+  <div>
+    <button (click)="updatePrice(150)">Изменить цену на 150</button>
+    <button (click)="updateQuantity(3)">Изменить количество на 3</button>
+  </div>
+</div>

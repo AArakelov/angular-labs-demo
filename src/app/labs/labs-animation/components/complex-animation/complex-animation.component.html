@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>Value: {{ value }}</h1>
+
+  <!-- Применяем анимацию groupAnimation -->
+  <div *ngIf="value % 2 === 0" [@groupAnimation] class="group-box">
+    Group Animation
+  </div>
+
+  <!-- Применяем анимацию sequenceAnimation -->
+  <div *ngIf="value % 2 !== 0" [@sequenceAnimation] class="sequence-box">
+    Sequence Animation
+  </div>
+
+  <div *ngFor="let item of items" [@listAnimation] class="item">
+    {{ item }}
+  </div>
+
+  <button (click)="increment()">Increment</button>
+  <button (click)="decrement()">Decrement</button>
+</div>

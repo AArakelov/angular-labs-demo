@@ -1,0 +1,33 @@
+.labs-di-container {
+  max-width: 800px; /* Максимальная ширина контейнера */
+  margin: 2rem auto; /* Центрирование контейнера */
+  padding: 1rem; /* Внутренние отступы */
+  background-color: #f9f9f9; /* Светлый фон для контейнера */
+  border-radius: 8px; /* Закругленные углы */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для контейнера */
+  text-align: center; /* Центрирование текста */
+}
+
+nav {
+  margin-bottom: 1.5rem; /* Отступ снизу для навигации */
+}
+
+ul {
+  list-style-type: none; /* Убираем маркеры списка */
+  padding: 0; /* Убираем отступы */
+}
+
+li {
+  display: inline; /* Выстраиваем элементы списка в строку */
+  margin-right: 15px; /* Отступ между пунктами навигации */
+}
+
+a {
+  text-decoration: none; /* Убираем подчеркивание */
+  font-weight: bold; /* Жирный шрифт */
+  transition: color 0.3s; /* Плавный переход цвета при наведении */
+}
+
+a:hover {
+  color: #004d40; /* Цвет при наведении на ссылку */
+}

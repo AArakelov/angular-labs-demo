@@ -46,7 +46,26 @@ export const routes: Routes = [
       }, {
         path: 'interaction-demo',
         loadComponent: () => import('./labs/labs-defer/interaction-demo/interaction-demo.component').then(c => c.InteractionDemoComponent)
+      },
+
+    ]
+  },
+  {
+    path: 'di-demo',
+    loadComponent: () => import('./labs/labs-di/labs-di.component').then(c => c.LabsDiComponent),
+    children: [
+      {
+        path: 'inject',
+        loadComponent: () => import('./labs/labs-di/inject-function/inject-function.component').then(c => c.InjectFunctionComponent)
       }
     ]
   },
+  {
+    path: 'labs-signals',
+    loadComponent: () => import('./labs/labs-signal/labs-signal.component').then(c => c.LabsSignalComponent),
+  },
+  {
+    path: 'labs-animation',
+    loadComponent: () => import('./labs/labs-animation/labs-animation.component').then(c => c.LabsAnimationComponent),
+  }
 ];

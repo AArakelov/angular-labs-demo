@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Signal Equality Function Demo</h1>
+
+  <div>
+    <h3>User Info:</h3>
+    <p>{{ userInfo() }}</p> <!-- Показываем вычисляемые данные -->
+    <button (click)="updateUser()">Update User Data</button>
+  </div>
+
+  <div>
+    <h3>Current User Data:</h3>
+    <p>ID: {{ user().id }}</p>
+    <p>Name: {{ user().name }}</p>
+  </div>
+</div>

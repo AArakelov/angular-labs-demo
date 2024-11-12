@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Signal Effects Demo</h1>
+
+  <div>
+    <h3>Count: {{ count() }}</h3>
+    <button (click)="increment()">Increment Count</button>
+  </div>
+
+  <div>
+    <h3>User Data:</h3>
+    <p>Name: {{ userData().name }}</p>
+    <p>Age: {{ userData().age }}</p>
+    <button (click)="updateUser()">Update User Data</button>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+<div class="container">
+  <button (click)="toggleVisibility()">Toggle Delayed Scale</button>
+  <div *ngIf="isVisible" [@delayedScale] class="delayed-scale-box">
+    This box scales with a delay.
+  </div>
+</div>
