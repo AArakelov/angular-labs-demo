@@ -1,0 +1,94 @@
+/* Основные стили для контейнера с фотографиями */
+.photos-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Стили для отдельного элемента с фотографией */
+.photo-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.photo-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Стили для изображения */
+.photo-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* Стили для заголовка */
+.photo-item h4 {
+  font-size: 16px;
+  color: #333;
+  margin: 10px 0;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Стили для кнопки удаления */
+.photo-item button {
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.photo-item button:hover {
+  background-color: #ff6f6b;
+}
+
+/* Стили для индикатора загрузки */
+.loading {
+  text-align: center;
+  font-size: 20px;
+  color: #007bff;
+  padding: 20px;
+  font-weight: bold;
+}
+
+/* Стили для отображения количества фотографий */
+.photo-count {
+  font-size: 16px;
+  margin-top: 20px;
+  text-align: center;
+  color: #555;
+}
+
+/* Кнопка перезагрузки */
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

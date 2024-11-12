@@ -1,0 +1,66 @@
+/* Основной контейнер для деталей фотографии */
+.photo-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+/* Стили для изображения */
+.photo-detail img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+/* Стили для заголовка */
+.photo-detail h2 {
+  font-size: 24px;
+  color: #333;
+  margin: 10px 0;
+  font-weight: bold;
+  text-align: center;
+  word-wrap: break-word; /* Перенос длинных слов на новую строку */
+}
+
+/* Стили для дополнительных данных */
+.photo-detail p {
+  font-size: 16px;
+  color: #555;
+  margin: 8px 0;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Стили для текста, если фото не выбрано */
+.no-photo {
+  font-size: 18px;
+  color: #888;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Добавим стили для кнопки редактирования или возврата */
+.photo-detail button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.photo-detail button:hover {
+  background-color: #0056b3;
+}
+

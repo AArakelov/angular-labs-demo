@@ -1,0 +1,13 @@
+@if (photoStore.selectedPhoto()) {
+  <div>
+    <h2>{{ photoStore.selectedPhoto()?.title }}</h2>
+    <img [src]="photoStore.selectedPhoto()?.url" [alt]="photoStore.selectedPhoto()?.title"/>
+    <p>{{ photoStore.selectedPhoto()?.title }}</p>
+    <p>{{ photoStore.selectedPhoto()?.url }}</p>
+  </div>
+
+} @else {
+  <p>No photo selected</p>
+}
+
+

@@ -1,0 +1,16 @@
+@if (photoStore.isLoading()) {
+    <div class="loading">
+        Loading photos...
+    </div>
+}
+
+<app-photo-detail></app-photo-detail>
+<div class="photos-list">
+    @for (photo of photoStore.photos(); track photo) {
+        <div class="photo-item" (click)="selectPhoto(photo)">
+            <img [src]="photo.thumbnailUrl" [alt]="photo.title"/>
+            <h4>{{ photo.title }}</h4>
+            <button (click)="deletePhoto(photo.id)">Delete</button>
+        </div>
+    }
+</div>

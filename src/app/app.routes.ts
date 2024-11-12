@@ -67,5 +67,9 @@ export const routes: Routes = [
   {
     path: 'labs-animation',
     loadComponent: () => import('./labs/labs-animation/labs-animation.component').then(c => c.LabsAnimationComponent),
+  },
+  {
+    path: 'labs-ngrx',
+    loadComponent: () => import('./labs/labs-ngrx/labs-ngrx.component').then(c => c.LabsNgrxComponent),
   }
 ];
