@@ -1,0 +1,38 @@
+.button-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.action-button {
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.action-button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.reset-button {
+  margin-top: 10px;
+  padding: 5px 15px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reset-button:hover {
+  background-color: #d32f2f;
+}

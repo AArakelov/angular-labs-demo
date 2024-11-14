@@ -1,0 +1,15 @@
+@if (vm$ | async; as vm) {
+
+    <div class="button-container">
+        <button
+                (click)="onButtonClick($event)"
+                [disabled]="vm.isDisabled"
+                class="action-button">
+            {{ vm.buttonText }}
+        </button>
+        <button (click)="onResetClick()" class="reset-button">
+            Reset
+        </button>
+    </div>
+}
+
