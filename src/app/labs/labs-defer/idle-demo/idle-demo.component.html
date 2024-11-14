@@ -5,10 +5,12 @@
 
 
   @defer (on idle) {
-    <app-heavy-component></app-heavy-component>
-  }
+  <app-heavy-component></app-heavy-component>
+}
 
 
-  <button (click)="startBusyTask()">Запустить длительную задачу</button>
-  <p *ngIf="busy">Браузер занят...</p>
+<button (click)="startBusyTask()">Запустить длительную задачу</button>
+@if (busy) {
+  <p>Браузер занят...</p>
+}
 </div>

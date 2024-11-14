@@ -1,13 +1,11 @@
 import {Component} from '@angular/core';
 import {delayedAnimation} from '../../animations/animations';
-import {NgIf} from '@angular/common';
+
 
 @Component({
   selector: 'app-delayed-animation',
   standalone: true,
-  imports: [
-    NgIf
-  ],
+  imports: [],
   templateUrl: './delayed-animation.component.html',
   styleUrl: './delayed-animation.component.scss',
   animations: [delayedAnimation]

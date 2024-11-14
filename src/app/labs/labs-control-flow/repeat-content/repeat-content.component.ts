@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
-import {NgClass, NgForOf} from '@angular/common';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-repeat-content',
   standalone: true,
   imports: [
-    NgClass,
-    NgForOf
-  ],
+    NgClass
+],
   templateUrl: './repeat-content.component.html',
   styleUrl: './repeat-content.component.scss'
 })

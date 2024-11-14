@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {NgIf} from '@angular/common';
+
 import {ColorAnimationComponent} from './components/color-animation/color-animation.component';
 import {DelayedAnimationComponent} from './components/delayed-animation/delayed-animation.component';
 import {BounceAnimationComponent} from './components/bounce-animation/bounce-animation.component';
@@ -12,13 +12,12 @@ import {
   selector: 'app-labs-animation',
   standalone: true,
   imports: [
-    NgIf,
     ColorAnimationComponent,
     DelayedAnimationComponent,
     BounceAnimationComponent,
     ComplexAnimationComponent,
     IncrementDecrementAnimationComponent
-  ],
+],
   templateUrl: './labs-animation.component.html',
   styleUrl: './labs-animation.component.scss',
 

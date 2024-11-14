@@ -1,6 +1,8 @@
 <div class="container">
   <button (click)="toggleVisibility()">Toggle Bounce</button>
-  <div *ngIf="isVisible" [@bounce] class="bounce-box">
-    This box bounces in and out.
-  </div>
+  @if (isVisible) {
+    <div [@bounce] class="bounce-box">
+      This box bounces in and out.
+    </div>
+  }
 </div>

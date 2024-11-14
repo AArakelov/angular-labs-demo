@@ -1,14 +1,13 @@
 import {Component} from '@angular/core';
 import {HeavyComponentComponent} from './heavy-component/heavy-component.component';
-import {NgIf} from '@angular/common';
+
 
 @Component({
   selector: 'app-idle-demo',
   standalone: true,
   imports: [
-    HeavyComponentComponent,
-    NgIf
-  ],
+    HeavyComponentComponent
+],
   templateUrl: './idle-demo.component.html',
   styleUrl: './idle-demo.component.scss'
 })

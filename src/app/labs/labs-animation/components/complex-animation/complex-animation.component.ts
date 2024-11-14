@@ -1,14 +1,11 @@
 import {Component} from '@angular/core';
-import {NgForOf, NgIf} from '@angular/common';
+
 import {groupAnimation, sequenceAnimation, staggerAnimation, valueChangeAnimation} from '../../animations/animations';
 
 @Component({
   selector: 'app-complex-animation',
   standalone: true,
-  imports: [
-    NgIf,
-    NgForOf
-  ],
+  imports: [],
   templateUrl: './complex-animation.component.html',
   styleUrl: './complex-animation.component.scss',
   animations: [
