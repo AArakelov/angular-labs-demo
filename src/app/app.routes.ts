@@ -1,4 +1,6 @@
 import {Routes} from '@angular/router';
+import {AuthService} from "./labs/labs-routing/services/auth-service";
+import {inject} from "@angular/core";
 
 export const routes: Routes = [
     {
@@ -30,7 +32,8 @@ export const routes: Routes = [
     },
     {
         path: 'labs-components', loadComponent: () => import('./labs/labs-components/labs-components.component')
-            .then(c => c.LabsComponentsComponent)
+            .then(c => c.LabsComponentsComponent),
+        resolve: {contact: () => 21}
     },
     {
         path: 'labs-defer', loadComponent: () => import('./labs/labs-defer/labs-defer.component')
@@ -75,5 +78,38 @@ export const routes: Routes = [
     {
         path: 'labs-ssr',
         loadComponent: () => import('./labs/labs-ssr-demo/labs-ssr-demo.component').then(c => c.LabsSsrDemoComponent),
+    },
+    {
+        path: 'labs-routing',
+        // canMatch: [(route: ActivatedRouteSnapshot,
+        //             state: RouterStateSnapshot) => {
+        //     return false
+        // }],
+        loadComponent: () => import('./labs/labs-routing/components/admin-dashboard/admin-dashboard.component').then(c => c.AdminDashboardComponent),
+        canActivateChild: [() => {
+            const authService = inject(AuthService);
+            return authService?.isAuthenticated()
+        }],
+        // canActivateChild: [() => of(false)],
+        // canActivateChild: [canActivateChild],
+        children: [{
+            path: '',
+            pathMatch: 'full',
+            redirectTo: 'admin-dashboard'
+        },
+            {
+                path: 'settings',
+                loadComponent: () => import('./labs/labs-routing/components/settings/settings.component').then(c => c.SettingsComponent)
+            },
+            {
+                path: 'users',
+                loadComponent: () => import('./labs/labs-routing/components/users/users.component').then(c => c.UsersComponent)
+            }
+        ]
+    },
+
+    {
+        path: '**',
+        redirectTo: 'control-flow'
     }
 ];
