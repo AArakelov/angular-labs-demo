@@ -1,52 +1,55 @@
 <div class="demo-container">
-  <div class="labs-defer-container">
-    <h1>Демонстрация отложенной загрузки изображений</h1>
+    <div class="labs-defer-container">
+        <h1>Демонстрация отложенной загрузки изображений</h1>
 
-    <p>Ниже представлено несколько разделов контента. Изображения будут загружены только при прокрутке.</p>
+        <p>Ниже представлено несколько разделов контента. Изображения будут загружены только при прокрутке.</p>
 
-    <div class="content-section">
-      <h2>Раздел 1</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris.</p>
+        <div class="content-section">
+            <h2>Раздел 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum
+                mauris.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Раздел 2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum
+                mauris.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Раздел 3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum
+                mauris.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Раздел 4</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum
+                mauris.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Раздел 5</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum
+                mauris.</p>
+        </div>
+
+        <!--   Использование @defer для отложенной загрузки тяжелого изображения-->
+        @defer (on viewport; ) {
+            <div class="image-wrapper">
+                <app-deferred-image></app-deferred-image>
+            </div>
+        } @placeholder {
+            <p>Placeholder</p>
+        } @loading {
+            <p>Loading...</p>
+        }
+
+        <div class="content-section">
+            <h2>Раздел 6</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum
+                mauris.</p>
+        </div>
+
     </div>
-
-    <div class="content-section">
-      <h2>Раздел 2</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris.</p>
-    </div>
-
-    <div class="content-section">
-      <h2>Раздел 3</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris.</p>
-    </div>
-
-    <div class="content-section">
-      <h2>Раздел 4</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris.</p>
-    </div>
-
-    <div class="content-section">
-      <h2>Раздел 5</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris.</p>
-    </div>
-
-    <!--   Использование @defer для отложенной загрузки тяжелого изображения-->
-    @defer (on viewport;) {
-      <div class="image-wrapper">
-        <app-deferred-image></app-deferred-image>
-      </div>
-    } @placeholder {
-      <p>Placeholder</p>
-    } @loading {
-      <p>Loading...</p>
-    }
-
-    <div class="content-section">
-      <h2>Раздел 6</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris.</p>
-    </div>
-
-    <div class="content-section">
-      <h2>Раздел 7</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris.</p>
-    </div>
-  </div>
+</div>

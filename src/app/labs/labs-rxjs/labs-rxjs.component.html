@@ -1,0 +1,23 @@
+<div class="app-container">
+    <!-- Отложенное выполнение через asyncScheduler -->
+    <div>
+        <h3>AsyncScheduler Output</h3>
+        <p>Check the console for asyncScheduler output!</p>
+        <button (click)="withoutAsyncScheduler()">withoutAsyncScheduler</button>
+        <button (click)="onAsyncScheduler()">AsyncScheduler</button>
+
+    </div>
+
+    <!--Deprecate toPromise()-->
+    <div>
+        <h3>Deprecate toPromise()</h3>
+        <button (click)="toPromise()">toPromise</button>
+
+    </div>
+
+    <!--takeUntilDestroyed()-->
+    <div>
+        <h3>takeUntilDestroyed()</h3>
+    </div>
+
+</div>

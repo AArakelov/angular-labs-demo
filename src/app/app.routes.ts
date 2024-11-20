@@ -33,7 +33,7 @@ export const routes: Routes = [
     {
         path: 'labs-components', loadComponent: () => import('./labs/labs-components/labs-components.component')
             .then(c => c.LabsComponentsComponent),
-        resolve: {contact: () => 21}
+        resolve: {contact: () => 21, productCategory: () => 'value from rroute'}
     },
     {
         path: 'labs-defer', loadComponent: () => import('./labs/labs-defer/labs-defer.component')
@@ -78,6 +78,10 @@ export const routes: Routes = [
     {
         path: 'labs-ssr',
         loadComponent: () => import('./labs/labs-ssr-demo/labs-ssr-demo.component').then(c => c.LabsSsrDemoComponent),
+    },
+    {
+        path: 'labs-rxjs',
+        loadComponent: () => import('./labs/labs-rxjs/labs-rxjs.component').then(c => c.LabsRxjsComponent),
     },
     {
         path: 'labs-routing',

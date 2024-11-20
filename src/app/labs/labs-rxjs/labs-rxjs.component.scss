@@ -1,0 +1,68 @@
+/* Стиль для контейнера компонента */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовки для разных секций */
+h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 5px;
+}
+
+/* Стиль для ошибок */
+.error {
+  color: red;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Стили для списка данных */
+ul {
+  padding-left: 20px;
+}
+
+li {
+  background-color: #f9f9f9;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease-in-out;
+}
+
+li:hover {
+  background-color: #e2f1ff;
+  border-color: #007bff;
+}
+
+/* Стили для загрузки */
+.loading {
+  font-size: 1.2rem;
+  color: #007bff;
+  margin-top: 20px;
+}
+
+/* Стиль для кнопки/ссылки */
+button, a {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, a:hover {
+  background-color: #0056b3;
+}
