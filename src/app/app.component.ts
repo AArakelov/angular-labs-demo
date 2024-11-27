@@ -1,6 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit}        from '@angular/core';
 import {RouterLink, RouterOutlet} from '@angular/router';
-
 
 @Component({
   selector: 'app-root',
@@ -14,7 +13,7 @@ export class AppComponent implements OnInit {
   i = 0
 
   ngOnInit() {
-  }
 
+  }
 
 }
